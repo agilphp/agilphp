@@ -1,0 +1,68 @@
+{
+	"name": "webcol/calima",
+	"description": "Framework PHP en español",
+	"type": "project",
+        "version": "1.1.5",
+	"keywords": ["framework", "Php", "MVC", "oop", "Framework php hispano"],
+	"homepage": "http://AgilPhp.com",
+	"license": "MIT",
+	"authors": [
+            
+                {
+                        "name": "Efrain Restrepo",
+                        "email": "efrasoft@outlook.com",
+                        "homepage": "http://AgilPhp.com/autores",
+                        "role": "Pionero - Desarrollador"
+                },
+                 
+                {
+                        "name": "Ramon Serrano",
+                        "email": "ramon.calle.88@gmail.com",
+                        "homepage": "http://AgilPhp.com/autores",
+                        "role": "Desarrollador - Nucleo"
+                },
+		{
+			"name": "AgilPhp Comunidad",
+			"homepage": "https://github.com/webcol/calima/graphs/contributors"
+		}
+	],
+	"support": {
+		"email": "info@AgilPhp.com",
+		"issues": "https://github.com/webcol/Calima/issues",
+		"blog": "http://AgilPhp.com/blog",
+		"source": "https://github.com/webcol/Calima"
+	},
+	
+	"bin": [
+		"Sistema/Nucleo/CFBootstrap.php"
+	],
+	"require": {
+		"php": ">=5.4.0",
+                "propel/propel": "2.0.0-alpha8",
+                "swiftmailer/swiftmailer": "5.*",
+                "setasign/fpdf": "1.*",
+                "phpoffice/phpspreadsheet": "1.*",               
+                "league/csv": "7.*",
+                "siriusphp/upload": "2.*",                                
+                "monolog/monolog":  "*",
+                "smottt/wideimage": "*"
+                
+	},
+         
+        
+	"autoload": {
+		"classmap" : [
+			"Sistema/Ayudantes/"
+			
+		],
+                 "psr-4": {
+                    
+                    "Sistema\\Nucleo\\": "Sistema/Nucleo",
+                    "Sistema\\Ayudantes\\": "Sistema/Ayudantes"
+                    
+                    
+
+                }
+	}
+        
+}
