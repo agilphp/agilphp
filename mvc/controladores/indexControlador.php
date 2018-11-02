@@ -36,7 +36,7 @@ use Sistema\Nucleo as Sisnuc;
 use Sistema\Ayudantes as Sisayu;
 
 
-class indexControlador extends Sisnuc\CFControlador
+class indexControlador extends Sisnuc\APControlador
 {
     private $_exc;
     private $_ayuda;
@@ -46,19 +46,19 @@ class indexControlador extends Sisnuc\CFControlador
     public function __construct() {
         parent::__construct();
        
-        $this->_ayuda= new Sisayu\CFPHPAyuda;
-        //$this->cargaAyudante('CfPHPAyuda');
-		//$this->cargaAyudante('CfPHPSeguridad');
-        $this->_seg= new Sisayu\CFPHPSeguridad;
+        $this->_ayuda= new Sisayu\APPHPAyuda;
+        //$this->cargaAyudante('APPHPAyuda');
+		//$this->cargaAyudante('APPHPSeguridad');
+        $this->_seg= new Sisayu\APPHPSeguridad;
         
-        $this->_sesion=new Sisnuc\CFSesion();
+        $this->_sesion=new Sisnuc\APSesion();
          
     }
     
     public function index()
     { 
-        // Se verifica que en el archivo de configuracion.php la constante Cf_CONFIG_INICIO==true
-        //Si esta en True se lanza el instalador de Cf
+        // Se verifica que en el archivo de configuracion.php la constante AP_CONFIG_INICIO==true
+        //Si esta en True se lanza el instalador de AP
         if(Ap_CONFIG_INICIO==true){
             
             $this->_vista->titulo = 'AgilPhp';

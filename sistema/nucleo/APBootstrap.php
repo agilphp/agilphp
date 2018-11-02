@@ -24,54 +24,39 @@
  */
 
 namespace Sistema\Nucleo;
-use Exception;
 
-abstract class CFControlador
+class APBootstrap 
 {
-    protected $_vista;
-    
-    public function __construct() {
-        $this->_vista = new CFVista(new CFSolicitud);
-    }
-    
-    protected function cargaLib($libreria){
-        $rutaLib = RUTA_LIBS . $libreria . '.php';
-        if(is_readable($rutaLib)){
-            require_once $rutaLib;
-           //echo 'libreria cargada';
-        }
-        else {
-            throw new Exception("houston tenemos un problema! al cargar libreria");
-        }
-    }
-    
-    protected function cargaModelo($modelo){
-        $modelo=$modelo.'Modelo';
-       $rutaMod = RUTA_MOD . $modelo . '.php';
-        if(is_readable($rutaMod)){
-            require_once $rutaMod;
-            $modelo = new $modelo;
-            return $modelo;
-           //echo 'modelo cargado';
-        }
-        else {
-            //echo $rutaMod;
+
+    public static function actuar(APSolicitud $peticion)
+    {
+        $controlador = $peticion->getControlador() . 'Controlador';
+        //definimos la ruta al controlador
+        $rutaControlador = SITE_ROOT . 'mvc' . DS .'controladores' . DS . $controlador . '.php';
+        $metodo = $peticion->getMetodo();
+        $args = $peticion->getArgumentos();
+        
+        //verifcamos que el archivo existe con la funcion de PHP is_readable
+        if(is_readable($rutaControlador)){
+            require_once $rutaControlador;
+            $controlador = new $controlador;
             
+            if(is_callable(array($controlador, $metodo))){
+                $metodo = $peticion->getMetodo();
+            }
+            else{
+                $metodo = 'index';
+            }
             
-            throw new Exception("houston tenemos un problema! al cargar modelo");
+            if(isset($args)){
+                call_user_func_array(array($controlador, $metodo), $args);
+            }
+            else{
+                call_user_func(array($controlador, $metodo));
+            }
             
+        } else {
+            header('Location: '.  Ap_BASE_URL.'error/');           
         }
     }
-    
-    protected function cargaAyudante($ayudante){
-       $rutaAyudante = RUTA_AYUDANTES . $ayudante . '.php';
-        if(is_readable($rutaAyudante)){
-            require_once $rutaAyudante;
-           //echo 'libreria cargada';
-        }
-        else {
-            throw new Exception("houston tenemos un problema! al cargar ayudante");
-        }
-    }
-    
 }

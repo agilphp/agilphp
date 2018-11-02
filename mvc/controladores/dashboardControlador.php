@@ -36,7 +36,7 @@ use Sistema\Nucleo as Sisnuc;
 use Sistema\Ayudantes as Sisayu;
 
 
-class dashboardControlador extends Sisnuc\CFControlador
+class dashboardControlador extends Sisnuc\APControlador
 {
     private $_exc;
     private $_ayuda;
@@ -46,12 +46,12 @@ class dashboardControlador extends Sisnuc\CFControlador
     public function __construct() {
         parent::__construct();
        
-        $this->_ayuda= new Sisayu\CFPHPAyuda;
-        //$this->cargaAyudante('CfPHPAyuda');
-		//$this->cargaAyudante('CfPHPSeguridad');
-        $this->_seg= new Sisayu\CFPHPSeguridad;
+        $this->_ayuda= new Sisayu\APPHPAyuda;
+        //$this->cargaAyudante('APPHPAyuda');
+		//$this->cargaAyudante('APPHPSeguridad');
+        $this->_seg= new Sisayu\APPHPSeguridad;
         
-       $this->_sesion=new Sistema\Nucleo\CFSesion(); 
+       $this->_sesion=new Sistema\Nucleo\APSesion(); 
          
     }
     

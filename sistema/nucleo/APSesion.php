@@ -22,8 +22,8 @@
  * <http://www.AgilPhp.com>.
  */
 /*
- * require('Cf_Sesion.php');
- * $sesion=new Cf_Sesion();
+ * require('AP_Sesion.php');
+ * $sesion=new AP_Sesion();
  * Set to true if using https
  * $sesion->iniciarSesion('_s',false);
  
@@ -31,15 +31,15 @@
  * echo$_SESSION['something'];
  */
 namespace Sistema\Nucleo;
-class CFSesion
+class APSesion
 {   
     
-    private $host       = CF_BD_HOST;
-    private $usuario    = CF_BD_USUARIO;
-    private $clave      = CF_BD_CLAVE;
-    private $bdnombre   = CF_BD_NOMBRE;
-    private $bdchar     = CF_BD_CHAR;
-    private $bdconector = CF_BD_CONECTOR;
+    private $host       = AP_BD_HOST;
+    private $usuario    = AP_BD_USUARIO;
+    private $clave      = AP_BD_CLAVE;
+    private $bdnombre   = AP_BD_NOMBRE;
+    private $bdchar     = AP_BD_CHAR;
+    private $bdconector = AP_BD_CONECTOR;
     
    public function __construct() {
        session_regenerate_id(true);
@@ -84,7 +84,7 @@ class CFSesion
       // session_regenerate_id(true);
    }
 
-// ingrese la informacion de conexion a su base de datos, debe ser igual a la que esta en CFConfiguracion.php
+// ingrese la informacion de conexion a su base de datos, debe ser igual a la que esta en APConfiguracion.php
    function abrir() {
    $host = $this->host;
    $user = $this->usuario;

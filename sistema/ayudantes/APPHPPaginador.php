@@ -39,11 +39,11 @@
  * (you can pass the most critical GETs manually if you like)
  */
  
- //Esta clase fue editada por programadores de Cf con la aprobacion de Ruben Arroyo
+ //Esta clase fue editada por programadores de AP con la aprobacion de Ruben Arroyo
 
 namespace Sistema\Ayudantes;
 
-class Cf_PHPPaginator {
+class AP_PHPPaginator {
 	/*
 	 * MAIN Settings (required)
 	 */

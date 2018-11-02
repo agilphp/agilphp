@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class errorControlador extends \Sistema\Nucleo\CFControlador{
+class errorControlador extends \Sistema\Nucleo\APControlador{
     
     public function __construct() {
         parent::__construct();

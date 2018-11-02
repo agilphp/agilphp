@@ -13,7 +13,7 @@ define('DESTINO_EMAIL', 'info@AgilPhp.com');
 define('Ap_FORMATO_FECHA', 'l, d F Y');
 
 /* AgilPhp clave de licencia */
-define('Ap_LICENSE', 'Cf-O17N-JHK8-TDJL-B5AO-8WKA');
+define('Ap_LICENSE', 'AP-O17N-JHK8-TDJL-B5AO-8WKA');
 
 /* mensajes de warnin */
 define('Ap_DEBUG', TRUE);
@@ -36,7 +36,7 @@ define('Ap_FECHA_FORMATO_LOCAL', '%A, %d %B %G');
 define('Ap_LOCALE_TIME_FORMAT', ' %T');
 
 /* Por defecto almacenamos los datos de la aplicacion. */
-define('Ap_PATH_DATA', dirname(__FILE__) . '/Cf-data');
+define('Ap_PATH_DATA', dirname(__FILE__) . '/AP-data');
 
 #Configuracion Basica
 
@@ -75,8 +75,8 @@ define('Ap_AP_CREDITOS', 'CopyLeft 2018 Debeloped by www.webcol.net');
 /* Definimos un indice de clave para concatenar en encriptacion de datos */
 define('Ap_KEY_MD5', 'P0L1');
 
-/*  en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de Cf_PHPSeguridad */
-define('Ap_CSRF_SECRET','Cfbeta');
+/*  en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de AP_PHPSeguridad */
+define('Ap_CSRF_SECRET','APbeta');
 
 /*  Si usted va a utilizar SSL debe de cambiar a true */
 define('Ap_SESION_PARAMETRO_SEGURO','false');
@@ -90,9 +90,9 @@ define('publicador','2233');
 /* #base de datos */
 
 /* Configuracion de tu base de datos */
-define('CF_BD_HOST', 'localhost');
-define('CF_BD_NOMBRE', 'calima');
-define('CF_BD_USUARIO', 'jair');
-define('CF_BD_CLAVE', '123456');
-define('CF_BD_CHAR', 'utf8');
-define('CF_BD_CONECTOR', 'mysql');
+define('AP_BD_HOST', 'localhost');
+define('AP_BD_NOMBRE', 'calima');
+define('AP_BD_USUARIO', 'jair');
+define('AP_BD_CLAVE', '123456');
+define('AP_BD_CHAR', 'utf8');
+define('AP_BD_CONECTOR', 'mysql');

@@ -27,7 +27,7 @@ namespace Sistema\Ayudantes;
 
 
 
-class CFPHPAyuda {
+class APPHPAyuda {
     
     
     private $_sesion;
@@ -36,7 +36,7 @@ class CFPHPAyuda {
     public function __construct() {
         //parent::__construct();
     
-    $this->_sesion=new \Sistema\Nucleo\CFSesion();
+    $this->_sesion=new \Sistema\Nucleo\APSesion();
     }
     public function enviarCorreo($para, $titulo= 'Asunto', $mensaje= 'cuerpo del correo'){
         return mail($para, $titulo, $mensaje);

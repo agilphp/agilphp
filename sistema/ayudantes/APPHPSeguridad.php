@@ -25,7 +25,7 @@
 
 namespace Sistema\Ayudantes;
 
-class CFPHPSeguridad {
+class APPHPSeguridad {
 
 //Seguridad
     
@@ -60,19 +60,19 @@ class CFPHPSeguridad {
     }
     // encriptacion
     function cifrado($clave){
-        $cfi=sha1(md5($clave));
-        return $clave=Ap_KEY_MD5.$cfi;
+        $APi=sha1(md5($clave));
+        return $clave=Ap_KEY_MD5.$APi;
     }
     // Protecion CSRF
     public function generoTokenDeFormulario($formulario) {
-        $secreta =  Cf_CSRF_SECRET.$this->generarCadenaAleatoria();
+        $secreta =  AP_CSRF_SECRET.$this->generarCadenaAleatoria();
         $sid = session_id();
         $token = md5($secreta.$sid.$formulario);
         return $token;
     }
     
     public function verificoTokenDeFormulario($formulario, $token) {
-        $secreta =  Cf_CSRF_SECRET.$this->generarCadenaAleatoria();
+        $secreta =  AP_CSRF_SECRET.$this->generarCadenaAleatoria();
         $sid = session_id();
         $correcta = md5($secreta.$sid.$formulario);
         return ($token == $correcta);

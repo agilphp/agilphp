@@ -50,7 +50,7 @@
  
 namespace Sistema\Ayudantes;
 
-class CFPHPFormularios
+class APPHPFormularios
 {
 	/*
 	 * Form configuration. It don't need description

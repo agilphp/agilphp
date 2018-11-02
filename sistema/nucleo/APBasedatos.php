@@ -25,15 +25,15 @@
 
 namespace Sistema\Nucleo;
 
-class CFBasedatos 
+class APBasedatos 
 {
     
-    private $host       = CF_BD_HOST;
-    private $usuario    = CF_BD_USUARIO;
-    private $clave      = CF_BD_CLAVE;
-    private $bdnombre   = CF_BD_NOMBRE;
-    private $bdchar     = CF_BD_CHAR;
-    private $bdconector = CF_BD_CONECTOR;
+    private $host       = AP_BD_HOST;
+    private $usuario    = AP_BD_USUARIO;
+    private $clave      = AP_BD_CLAVE;
+    private $bdnombre   = AP_BD_NOMBRE;
+    private $bdchar     = AP_BD_CHAR;
+    private $bdconector = AP_BD_CONECTOR;
     private $stmt;
     private $dbh;
     private $error;

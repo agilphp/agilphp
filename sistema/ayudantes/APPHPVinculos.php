@@ -16,37 +16,20 @@
  * This software consists of voluntary contributions made by many individuals
  * and is licensed under the MIT license. For more information, see
  * @category   
- * @package    sistema/nucleo
+ * @package    sistema/ayudantes
  * @copyright  Copyright (c) 2006 - 2014 webcol.net (http://www.webcol.net/calima)
  * @license	https://github.com/webcol/Calima/blob/master/LICENSE	MIT
  * @version	##BETA 1.0##, ##2014 - 2015##
  * <http://www.AgilPhp.com>.
  */
 
-namespace Sistema\Nucleo;
+namespace Sistema\Ayudantes; 
 
-class CFVista
-{
-    private $_controlador;
+class APPHPVinculos {
     
-    public function __construct(CFSolicitud $peticion) {
-        $this->_controlador = $peticion->getControlador();
-    }
+    function get_dominio(){
     
-    public function imprimirVista($vista, $item = false)
-    {            
-            
-        $ver_ruta = VIEW_PATH . $this->_controlador . DS . $vista . '.phtml';
-        
-        if(is_readable($ver_ruta)){
-            include_once SITE_ROOT . 'mvc/vistas' . DS . ADICIONALES_VISTA . DS . 'encabezado.php';
-            include_once $ver_ruta;
-            include_once SITE_ROOT . 'mvc/vistas' . DS . ADICIONALES_VISTA . DS . 'pie_de_pagina.php';
-        } 
-        else {
-            
-            header('Location: '.  Ap_BASE_URL.'error/index'.'?error='.'vista' );
-            
-        }
-    }
+    $dominio = "http://www.my-site-domain.com/";
+    return $dominio;
+   }
 }

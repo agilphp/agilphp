@@ -34,7 +34,7 @@
 	},
 	
 	"bin": [
-		"Sistema/Nucleo/CFBootstrap.php"
+		"Sistema/Nucleo/APBootstrap.php"
 	],
 	"require": {
 		"php": ">=5.4.0",

@@ -37,7 +37,7 @@ if (version_compare(PHP_VERSION, '5.3.20', '<'))
 use Sistema\Nucleo as Sisnuc;
 use Sistema\Ayudantes as Sisayu;
 
-class instaladorControlador extends Sisnuc\CFControlador
+class instaladorControlador extends Sisnuc\APControlador
 {
     //put your code here
     private $_basedatos;
@@ -47,7 +47,7 @@ class instaladorControlador extends Sisnuc\CFControlador
         parent::__construct();
        $this->_basedatos=$this->cargaModelo('instalador'); 
         
-        $this->_ayuda= new Sisayu\CFPHPAyuda;
+        $this->_ayuda= new Sisayu\APPHPAyuda;
     }
     
     public function index(){
@@ -102,15 +102,15 @@ class instaladorControlador extends Sisnuc\CFControlador
                
          echo $proyecto; 
              
-        chmod (RUTA_NUCLEO."CFConfiguracion.php", 0777);
-      //chmod($hostbd.$proyecto."Sistema/Nucleo/CFConfiguracion.php", 0755);
+        chmod (RUTA_NUCLEO."APConfiguracion.php", 0777);
+      //chmod($hostbd.$proyecto."Sistema/Nucleo/APConfiguracion.php", 0755);
 
-        $file = fopen(RUTA_NUCLEO."CFConfiguracion.php", "w");
+        $file = fopen(RUTA_NUCLEO."APConfiguracion.php", "w");
         
         fwrite($file, "<?php " . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* inicio la configuracion*/" . PHP_EOL);
-        fwrite($file, "define('Cf_CONFIG_INICIO', $config);" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_CONFIG_INICIO', $config);" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* Defino zona horaria*/" . PHP_EOL);
         fwrite($file, "date_default_timezone_set('America/Bogota');" . PHP_EOL.PHP_EOL);
@@ -120,35 +120,35 @@ class instaladorControlador extends Sisnuc\CFControlador
         fwrite($file, "define('DESTINO_EMAIL', 'info@AgilPhp.com');" . PHP_EOL.PHP_EOL);        
 
         fwrite($file, "/* Defino el formato de fecha */" . PHP_EOL);
-        fwrite($file, "define('Cf_FORMATO_FECHA', 'l, d F Y');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_FORMATO_FECHA', 'l, d F Y');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* AgilPhp clave de licencia */" . PHP_EOL);
-        fwrite($file, "define('Cf_LICENSE', 'Cf-O17N-JHK8-TDJL-B5AO-8WKA');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_LICENSE', 'AP-O17N-JHK8-TDJL-B5AO-8WKA');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* mensajes de warnin */" . PHP_EOL);
-        fwrite($file, "define('CF_DEBUG', TRUE);" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_DEBUG', TRUE);" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* Idioma local */" . PHP_EOL);
-        fwrite($file, "define('CF_LOCALE', 'es_ES');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_LOCALE', 'es_ES');" . PHP_EOL.PHP_EOL);
         
         
         fwrite($file, "/* Create una cuenta con google analytics y agrega el UA en la constante */" . PHP_EOL);
-        fwrite($file, "define('CF_ANALYTICS', $analytics);" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_ANALYTICS', $analytics);" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* con la siguiente constante podras crear una ip fija de tu empresa para hacer " . PHP_EOL);
         fwrite($file, "* pruebas en tu entorno de red basado en tu ip que te ofrece tu proveedor de servicio" . PHP_EOL);
         fwrite($file, "*/" . PHP_EOL);
-        fwrite($file, "define('Cf_IPPRUEBAS', 'x.x.x.x');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_IPPRUEBAS', 'x.x.x.x');" . PHP_EOL.PHP_EOL);
         
         
         fwrite($file, "/* Transladamos a formato local */" . PHP_EOL);
-        fwrite($file, "define('CF_FECHA_FORMATO_LOCAL', '%A, %d %B %G');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_FECHA_FORMATO_LOCAL', '%A, %d %B %G');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* Translatable time format */" . PHP_EOL);
-        fwrite($file, "define('CF_LOCALE_TIME_FORMAT', ' %T');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_LOCALE_TIME_FORMAT', ' %T');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* Por defecto almacenamos los datos de la aplicacion. */" . PHP_EOL);
-        fwrite($file, "define('CF_PATH_DATA', dirname(__FILE__) . '/Cf-data');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_PATH_DATA', dirname(__FILE__) . '/AP-data');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "#Configuracion Basica" . PHP_EOL.PHP_EOL);
         
@@ -162,37 +162,37 @@ class instaladorControlador extends Sisnuc\CFControlador
         fwrite($file, "define('ADICIONALES_VISTA', 'adicionales');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* Definimos una CONSTANTE como nombre de aplicacion */" . PHP_EOL);
-        fwrite($file, "define('CF_AP_NOMBRE', 'AgilPhp');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_AP_NOMBRE', 'AgilPhp');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* Definimos un Slogan para la aplicacion web */" . PHP_EOL);
-        fwrite($file, "define('CF_AP_SLOGAN', 'Tu Framework php MVC hispano ');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_AP_SLOGAN', 'Tu Framework php MVC hispano ');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* Empresa de la aplicacion */" . PHP_EOL);
-        fwrite($file, "define('CF_AP_EMPRESA', 'www.webcol.net');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_AP_EMPRESA', 'www.webcol.net');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* Creditos de la aplicacion */" . PHP_EOL);
-        fwrite($file, "define('CF_AP_CREDITOS', 'CopyLeft 2015 Debeloped by www.webcol.net');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_AP_CREDITOS', 'CopyLeft 2015 Debeloped by www.webcol.net');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "#webcol seguridad" . PHP_EOL. PHP_EOL);
         
         fwrite($file, "/* Definimos un indice de clave para concatenar en encriptacion de datos */" . PHP_EOL);
         fwrite($file, "define('Ap_KEY_MD5', 'P0L1');" . PHP_EOL.PHP_EOL);
         
-        fwrite($file, "/*  en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de Cf_PHPSeguridad */" . PHP_EOL);
-        fwrite($file, "define('Cf_CSRF_SECRET','Cfbeta');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "/*  en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de AP_PHPSeguridad */" . PHP_EOL);
+        fwrite($file, "define('AP_CSRF_SECRET','APbeta');" . PHP_EOL.PHP_EOL);
 		
 		fwrite($file, "/*  Si usted va a utilizar SSL debe de cambiar a true */" . PHP_EOL);
-        fwrite($file, "define('Cf_SESION_PARAMETRO_SEGURO','false');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('AP_SESION_PARAMETRO_SEGURO','false');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* #base de datos */" . PHP_EOL. PHP_EOL);
         
         fwrite($file, "/* Configuracion de tu base de datos */" . PHP_EOL);
-        fwrite($file, "define('CF_BD_HOST', $hostbd);" . PHP_EOL);
-        fwrite($file, "define('CF_BD_NOMBRE', $nombrebd);" . PHP_EOL);
-        fwrite($file, "define('CF_BD_USUARIO', $usuariobd);" . PHP_EOL);
-        fwrite($file, "define('CF_BD_CLAVE', $clavebd);" . PHP_EOL);
-        fwrite($file, "define('CF_BD_CHAR', 'utf8');" . PHP_EOL);
-        fwrite($file, "define('CF_BD_CONECTOR', 'mysql');");
+        fwrite($file, "define('AP_BD_HOST', $hostbd);" . PHP_EOL);
+        fwrite($file, "define('AP_BD_NOMBRE', $nombrebd);" . PHP_EOL);
+        fwrite($file, "define('AP_BD_USUARIO', $usuariobd);" . PHP_EOL);
+        fwrite($file, "define('AP_BD_CLAVE', $clavebd);" . PHP_EOL);
+        fwrite($file, "define('AP_BD_CHAR', 'utf8');" . PHP_EOL);
+        fwrite($file, "define('AP_BD_CONECTOR', 'mysql');");
         fwrite($file, "");
         fclose($file);
         

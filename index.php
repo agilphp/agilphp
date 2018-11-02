@@ -32,46 +32,46 @@ use Sistema\Ayudantes;
 //lenguaje
 
 /*session_start();
-$sesion=new Sistema\Nucleo\CFSesion();
+$sesion=new Sistema\Nucleo\APSesion();
 $sesion->iniciarSesion('_s', false);
 header('Cache-control: private'); // IE 6 FIX
  */
 
 
 
-/** Cf directorio separador */
+/** AP directorio separador */
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
-/** Cf raiz del sitio */
+/** AP raiz del sitio */
 defined('SITE_ROOT')? null: define('SITE_ROOT', realpath(dirname(__FILE__)).DS);
-/** Cf PATH del sitio */
+/** AP PATH del sitio */
 defined('SITE_PATH') ? NULL : define ('SITE_PATH', realpath(dirname(__FILE__) . DS . '..' . DS) . DS);
 
-/** Cf definimos constante Ruta directa al nucleo de framework  */
+/** AP definimos constante Ruta directa al nucleo de framework  */
 define('RUTA_NUCLEO', SITE_ROOT . 'Sistema'.DS.'Nucleo' . DS);
 
 # define para mvc erp
 
-/** Cf definimos constante  directa a la vista del framework  */
+/** AP definimos constante  directa a la vista del framework  */
 define('VIEW_PATH', SITE_ROOT . 'mvc'.DS.'vistas' . DS);
-/** Cf definimos constante  directa a los controladores del framework  */
+/** AP definimos constante  directa a los controladores del framework  */
 define('CONTR_PATH', SITE_ROOT . 'mvc'.DS.'controladores' . DS);
-/** Cf definimos constante  directa a los modelos del framework  */
+/** AP definimos constante  directa a los modelos del framework  */
 define('RUTA_MOD', SITE_ROOT . 'mvc'.DS.'modelos' . DS);
 
 # define ruta a los stilos del public
 
-/** Cf definimos constante  directa a los css dentro del directorio public_ del framework  */
+/** AP definimos constante  directa a los css dentro del directorio public_ del framework  */
 define('CSS_PATH', SITE_ROOT . 'public_'.DS.'css' . DS);
-/** Cf definimos constante  directa a los css dentro del directorio public_ del framework  */
+/** AP definimos constante  directa a los css dentro del directorio public_ del framework  */
 define('IMG_PATH', SITE_ROOT . 'public_'.DS.'img' . DS);
-/** Cf definimos constante  directa a los js dentro del directorio public_ del framework  */
+/** AP definimos constante  directa a los js dentro del directorio public_ del framework  */
 define('JS_PATH', SITE_ROOT . 'public_'.DS.'js' . DS);
-/** Cf definimos constante  directa a las librerias dentro  del framework  */
+/** AP definimos constante  directa a las librerias dentro  del framework  */
 define('RUTA_LIBS', SITE_ROOT . 'Sistema'.DS.'librerias' . DS);
-/** Cf definimos constante  directa a los ayudantes del framework  */
+/** AP definimos constante  directa a los ayudantes del framework  */
 define('RUTA_AYUDANTES', SITE_ROOT . 'Sistema'.DS.'ayudantes' . DS);
 
-/** Cf definimos constante  directa a los lenguajes del framework  */
+/** AP definimos constante  directa a los lenguajes del framework  */
 define('RUTA_LENGUAJES', SITE_ROOT . 'Sistema'.DS.'lenguajes' . DS);
 
 
@@ -108,20 +108,20 @@ if ( is_file( @dirname(__FILE__).'RUTA_LIBS'.DS.'php-firewall'.DS.'firewall.php'
 	include_once( @dirname(__FILE__).'RUTA_LIBS'.DS.'php-firewall'.DS.'firewall.php' );*/
 
 # Cargamos la autocarga dinamica y configuraciones
-//require_once RUTA_NUCLEO . 'Cf_Autocarga.php';
-require_once RUTA_NUCLEO . 'CFConfiguracion.php';
+//require_once RUTA_NUCLEO . 'AP_Autocarga.php';
+require_once RUTA_NUCLEO . 'APConfiguracion.php';
 
 try{
    
-    Nucleo\CFBootstrap::actuar(new Nucleo\CFSolicitud);
-    //CFBootstrap::actuar(new CFSolicitud);
+    Nucleo\APBootstrap::actuar(new Nucleo\APSolicitud);
+    //APBootstrap::actuar(new APSolicitud);
    
 } catch (Exception $e) {
     echo $e->getMessage();
 }
 
 /*try{
-  CfBootstrap::actuar(new Cf_Solicitud);
+  APBootstrap::actuar(new AP_Solicitud);
 }
 catch(Exception $e){
    

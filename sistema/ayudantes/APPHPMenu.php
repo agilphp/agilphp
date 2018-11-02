@@ -25,7 +25,7 @@
 
 namespace Sistema\Ayudantes;
 
-class CFPHPMenu
+class APPHPMenu
 {
     
     

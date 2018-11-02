@@ -7,7 +7,7 @@ use Sistema\Nucleo as Sisnuc;
  *
  * @author webcol
  */
-class instaladorModelo extends Sisnuc\CFModelo
+class instaladorModelo extends Sisnuc\APModelo
 {
     //put your code here
     public function __construct() {

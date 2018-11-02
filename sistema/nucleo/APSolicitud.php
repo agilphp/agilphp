@@ -25,7 +25,7 @@
 
 namespace Sistema\Nucleo;
 
-class CFSolicitud
+class APSolicitud
 {
     private $_controlador;
     private $_metodo;
