@@ -6,16 +6,14 @@
 <img src="http://www.AgilPhp.com/public_/images/ascii_Cf.PNG"/>
 
 
-Calima Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
-Si tienes deseos de ayudar recuerda que tu ayuda debe ser para esta version de Cf en español.
+AgilPhp Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
+Si tienes deseos de ayudar recuerda que tu ayuda debe ser para esta version de Ap en español.
 
 
-Cf  Trae embebido [bootstrap 4.0] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
+Ap  Trae embebido [bootstrap 4.0] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
 buscamos una fácil instalación un código claro, limpio en español, basado en el modelo MVC bajo el paradigma orientado a objetos.
 
  
-+[![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-+
 
 
 
@@ -45,8 +43,8 @@ temporal/               informaci�n temporal
 
 ##DOCUMENTACION##
 -----------------
-Libro PDF [Calima Framework 1.5](https://leanpub.com/AgilPhpphp)
-Cf PHP [Clases de Referencia](http://www.AgilPhp.com/clases/) y 
+
+Ap PHP [Clases de Referencia](http://www.AgilPhp.com/clases/) y 
  [Guía de ayuda](http://www.AgilPhp.com/blog/) sigue cada página de ayuda y termina sus ejemplos.
 
 
@@ -70,7 +68,7 @@ Cf cree que tu apoyo es demasiado importante sin pensar en lo mínimo que sea,  
 Tu puede colaborar con:
 
 
-* [Report issues](https://github.com/webcol/Calima/issues)
+* [Report issues](https://github.com/agilphp/agilphp/issues)
 * Colabora con
     - Ideas de diseño o templates para el marco de trabajo.
     - Desarrollo de ayudantes, librerías o servicios web.
@@ -89,12 +87,7 @@ Top 10 de participantes no dejes de estar aquí:
 
 * [Efrain Restrepo](https://www.linkedin.com/in/efrasoft)
 	- Desarrollador Fundador
-* Ramon Serrano
-    - Mejoras en el Nucleo de Cf.    
-* [Haomaro] (https://github.com/haomaro)
-	- Desarrollo de ayudantes y mejoras en el codigo
-* [John Sanchez](https://www.facebook.com/johnn.sanchez?fref=ts)
-	- Diseño de Marca
+
 	
 	
 ##DONACIONES##
@@ -123,4 +116,4 @@ http://www.meetup.com/AgilPhp/members/ <br>
 ##Licencia##
 -----------------
 
-Calima framework Cf es software openSourced bajo [Licencia Mit] (http://es.wikipedia.org/wiki/Licencia_MIT)
+AgilPhp framework Ap es software openSourced bajo [Licencia Mit] (http://es.wikipedia.org/wiki/Licencia_MIT)
