@@ -41,7 +41,7 @@
  
  //Esta clase fue editada por programadores de AP con la aprobacion de Ruben Arroyo
 
-namespace Sistema\Ayudantes;
+namespace sistema\ayudantes;
 
 class AP_PHPPaginator {
 	/*

@@ -19,18 +19,18 @@
  * @copyright  Copyright (c) 2006 - 2014 webcol.net (http://www.webcol.net/calima)
  * @license	https://github.com/webcol/Calima/blob/master/LICENSE	MIT
  * @version	##BETA 1.0##, ##2014 - 2015##
- * <http://www.AgilPhp.com>.
+ * <http://www.calimaframework.com>.
  */
 /*
- * require('AP_Sesion.php');
- * $sesion=new AP_Sesion();
+ * require('Cf_Sesion.php');
+ * $sesion=new Cf_Sesion();
  * Set to true if using https
  * $sesion->iniciarSesion('_s',false);
  
  * $_SESSION['something']='A value.';
  * echo$_SESSION['something'];
  */
-namespace Sistema\Nucleo;
+namespace sistema\nucleo;
 class APSesion
 {   
     
@@ -84,7 +84,7 @@ class APSesion
       // session_regenerate_id(true);
    }
 
-// ingrese la informacion de conexion a su base de datos, debe ser igual a la que esta en APConfiguracion.php
+// ingrese la informacion de conexion a su base de datos, debe ser igual a la que esta en CFConfiguracion.php
    function abrir() {
    $host = $this->host;
    $user = $this->usuario;

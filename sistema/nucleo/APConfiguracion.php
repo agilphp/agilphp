@@ -92,7 +92,7 @@ define('publicador','2233');
 /* Configuracion de tu base de datos */
 define('AP_BD_HOST', 'localhost');
 define('AP_BD_NOMBRE', 'calima');
-define('AP_BD_USUARIO', 'jair');
-define('AP_BD_CLAVE', '123456');
+define('AP_BD_USUARIO', 'root');
+define('AP_BD_CLAVE', '');
 define('AP_BD_CHAR', 'utf8');
 define('AP_BD_CONECTOR', 'mysql');

@@ -32,8 +32,8 @@ if (version_compare(PHP_VERSION, '5.3.20', '<'))
 
 //Cargamos los Espacios de nombres para el nucleo y los ayudantes
 //Utilizamos un alias
-use Sistema\Nucleo as Sisnuc;
-use Sistema\Ayudantes as Sisayu;
+use sistema\nucleo as Sisnuc;
+use sistema\ayudantes as Sisayu;
 
 
 class indexControlador extends Sisnuc\APControlador
@@ -59,17 +59,18 @@ class indexControlador extends Sisnuc\APControlador
     { 
         // Se verifica que en el archivo de configuracion.php la constante AP_CONFIG_INICIO==true
         //Si esta en True se lanza el instalador de AP
+        $this->_sesion->iniciarSesion('_s', false);
         if(Ap_CONFIG_INICIO==true){
             
             $this->_vista->titulo = 'AgilPhp';
             $this->_vista->imprimirVista('index', 'instalador');
-            $this->_sesion->iniciarSesion('_s', false);
+            
             
         }elseif (Ap_CONFIG_INICIO=='false') {
             
             $this->_vista->titulo = 'AgilPhp';
             $this->_vista->imprimirVista('index', 'instalador');
-            $this->_sesion->iniciarSesion('_s', false);
+            //$this->_sesion->iniciarSesion('_s', false);
         }
     } 
 }

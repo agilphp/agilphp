@@ -1,6 +1,6 @@
 <?php
 
-class contactosControlador extends \Sistema\Nucleo\APControlador
+class contactosControlador extends \sistema\nucleo\APControlador
 {
     
     private $_ayuda;
@@ -10,7 +10,7 @@ class contactosControlador extends \Sistema\Nucleo\APControlador
         
         // cargamos la clase ayudantes para usar sus metodos de ayuda
        
-        $this->_ayuda= new Sistema\Ayudantes\APPHPAyuda();
+        $this->_ayuda= new sistema\ayudantes\APPHPAyuda();
     }
     
     public function index()

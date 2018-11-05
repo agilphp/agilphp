@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class blogControlador extends \Sistema\Nucleo\APControlador
+class blogControlador extends \sistema\nucleo\APControlador
 {
     
     private $_ayuda;
@@ -16,7 +16,7 @@ class blogControlador extends \Sistema\Nucleo\APControlador
         parent::__construct();
         
         
-        $this->_ayuda = new Sistema\Ayudantes\APPHPAyuda();
+        $this->_ayuda = new sistema\ayudantes\APPHPAyuda();
     }
     
     public function index(){

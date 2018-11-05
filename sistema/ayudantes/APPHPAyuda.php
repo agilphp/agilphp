@@ -23,7 +23,7 @@
  * <http://www.AgilPhp.com>.
  */
 
-namespace Sistema\Ayudantes;
+namespace sistema\ayudantes;
 
 
 
@@ -36,7 +36,7 @@ class APPHPAyuda {
     public function __construct() {
         //parent::__construct();
     
-    $this->_sesion=new \Sistema\Nucleo\APSesion();
+    $this->_sesion=new \sistema\nucleo\APSesion();
     }
     public function enviarCorreo($para, $titulo= 'Asunto', $mensaje= 'cuerpo del correo'){
         return mail($para, $titulo, $mensaje);

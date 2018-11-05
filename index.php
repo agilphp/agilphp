@@ -25,14 +25,14 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Sistema\Nucleo;
-use Sistema\Ayudantes;
+use sistema\nucleo;
+use sistema\ayudantes;
 //use mvc\controladores;
 
 //lenguaje
 
 /*session_start();
-$sesion=new Sistema\Nucleo\APSesion();
+$sesion=new sistema\nucleo\APSesion();
 $sesion->iniciarSesion('_s', false);
 header('Cache-control: private'); // IE 6 FIX
  */
@@ -47,7 +47,7 @@ defined('SITE_ROOT')? null: define('SITE_ROOT', realpath(dirname(__FILE__)).DS);
 defined('SITE_PATH') ? NULL : define ('SITE_PATH', realpath(dirname(__FILE__) . DS . '..' . DS) . DS);
 
 /** AP definimos constante Ruta directa al nucleo de framework  */
-define('RUTA_NUCLEO', SITE_ROOT . 'Sistema'.DS.'Nucleo' . DS);
+define('RUTA_NUCLEO', SITE_ROOT . 'sistema'.DS.'nucleo' . DS);
 
 # define para mvc erp
 
@@ -67,12 +67,12 @@ define('IMG_PATH', SITE_ROOT . 'public_'.DS.'img' . DS);
 /** AP definimos constante  directa a los js dentro del directorio public_ del framework  */
 define('JS_PATH', SITE_ROOT . 'public_'.DS.'js' . DS);
 /** AP definimos constante  directa a las librerias dentro  del framework  */
-define('RUTA_LIBS', SITE_ROOT . 'Sistema'.DS.'librerias' . DS);
+define('RUTA_LIBS', SITE_ROOT . 'sistema'.DS.'librerias' . DS);
 /** AP definimos constante  directa a los ayudantes del framework  */
-define('RUTA_AYUDANTES', SITE_ROOT . 'Sistema'.DS.'ayudantes' . DS);
+define('RUTA_AYUDANTES', SITE_ROOT . 'sistema'.DS.'ayudantes' . DS);
 
 /** AP definimos constante  directa a los lenguajes del framework  */
-define('RUTA_LENGUAJES', SITE_ROOT . 'Sistema'.DS.'lenguajes' . DS);
+define('RUTA_LENGUAJES', SITE_ROOT . 'sistema'.DS.'lenguajes' . DS);
 
 
 //LENGUAJES
@@ -113,7 +113,7 @@ require_once RUTA_NUCLEO . 'APConfiguracion.php';
 
 try{
    
-    Nucleo\APBootstrap::actuar(new Nucleo\APSolicitud);
+    nucleo\APBootstrap::actuar(new nucleo\APSolicitud);
     //APBootstrap::actuar(new APSolicitud);
    
 } catch (Exception $e) {

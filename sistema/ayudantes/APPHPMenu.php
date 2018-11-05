@@ -23,7 +23,7 @@
  * <http://www.AgilPhp.com>.
  */
 
-namespace Sistema\Ayudantes;
+namespace sistema\ayudantes;
 
 class APPHPMenu
 {

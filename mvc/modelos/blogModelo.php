@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class blogModelo extends Sistema\Nucleo\APModelo
+class blogModelo extends sistema\nucleo\APModelo
 {
     
     public function __construct() {

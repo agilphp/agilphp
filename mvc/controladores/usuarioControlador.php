@@ -1,7 +1,7 @@
 <?php
 
 
-class usuarioControlador extends \Sistema\Nucleo\APControlador
+class usuarioControlador extends \sistema\nucleo\APControlador
 {
     private $_ayuda;
     private $_seg;
@@ -10,9 +10,9 @@ class usuarioControlador extends \Sistema\Nucleo\APControlador
         parent::__construct();
                
         // cargamos la clase ayudantes para usar sus metodos de ayuda       
-        $this->_ayuda= new Sistema\Ayudantes\APPHPAyuda;        
-        $this->_seg= new Sistema\Ayudantes\APPHPSeguridad;
-        $this->_sesion=new Sistema\Nucleo\APSesion();       
+        $this->_ayuda= new sistema\ayudantes\APPHPAyuda;        
+        $this->_seg= new sistema\ayudantes\APPHPSeguridad;
+        $this->_sesion=new sistema\nucleo\APSesion();       
     }    
     
     public function index(){     

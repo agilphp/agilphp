@@ -1,6 +1,6 @@
 <?php
 
-use Sistema\Nucleo as Sisnuc;
+use sistema\nucleo as Sisnuc;
 
 /**
  * Description of instaladorModelo

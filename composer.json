@@ -19,7 +19,7 @@
                         "name": "Ramon Serrano",
                         "email": "ramon.calle.88@gmail.com",
                         "homepage": "http://AgilPhp.com/autores",
-                        "role": "Desarrollador - Nucleo"
+                        "role": "Desarrollador - nucleo"
                 },
 		{
 			"name": "AgilPhp Comunidad",
@@ -34,7 +34,7 @@
 	},
 	
 	"bin": [
-		"Sistema/Nucleo/APBootstrap.php"
+		"sistema/nucleo/APBootstrap.php"
 	],
 	"require": {
 		"php": ">=5.4.0",
@@ -52,13 +52,13 @@
         
 	"autoload": {
 		"classmap" : [
-			"Sistema/Ayudantes/"
+			"sistema/ayudantes/"
 			
 		],
                  "psr-4": {
                     
-                    "Sistema\\Nucleo\\": "Sistema/Nucleo",
-                    "Sistema\\Ayudantes\\": "Sistema/Ayudantes"
+                    "sistema\\nucleo\\": "sistema/nucleo",
+                    "sistema\\ayudantes\\": "sistema/ayudantes"
                     
                     
 

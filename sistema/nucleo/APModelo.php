@@ -23,7 +23,7 @@
  * <http://www.AgilPhp.com>.
  */
 
-namespace Sistema\Nucleo;
+namespace sistema\nucleo;
 
 class APModelo
 {

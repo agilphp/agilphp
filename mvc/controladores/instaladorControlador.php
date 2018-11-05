@@ -34,8 +34,8 @@ if (version_compare(PHP_VERSION, '5.3.20', '<'))
 
 //Cargamos los Espacios de nombres para el nucleo y los ayudantes
 //Utilizamos un alias
-use Sistema\Nucleo as Sisnuc;
-use Sistema\Ayudantes as Sisayu;
+use sistema\nucleo as Sisnuc;
+use sistema\ayudantes as Sisayu;
 
 class instaladorControlador extends Sisnuc\APControlador
 {
@@ -103,7 +103,7 @@ class instaladorControlador extends Sisnuc\APControlador
          echo $proyecto; 
              
         chmod (RUTA_NUCLEO."APConfiguracion.php", 0777);
-      //chmod($hostbd.$proyecto."Sistema/Nucleo/APConfiguracion.php", 0755);
+      //chmod($hostbd.$proyecto."sistema/nucleo/APConfiguracion.php", 0755);
 
         $file = fopen(RUTA_NUCLEO."APConfiguracion.php", "w");
         

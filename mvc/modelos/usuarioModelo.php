@@ -1,5 +1,5 @@
 <?php
-class usuarioModelo extends Sistema\Nucleo\APModelo
+class usuarioModelo extends sistema\nucleo\APModelo
 {
     
     function ValidarUsuario($email,$password){          //  Consulta Mysql para buscar en la tabla Usuario aquellos usuarios que coincidan con el mail y password ingresados en pantalla de login

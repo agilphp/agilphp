@@ -32,8 +32,8 @@ if (version_compare(PHP_VERSION, '5.3.20', '<'))
 
 //Cargamos los Espacios de nombres para el nucleo y los ayudantes
 //Utilizamos un alias
-use Sistema\Nucleo as Sisnuc;
-use Sistema\Ayudantes as Sisayu;
+use sistema\nucleo as Sisnuc;
+use sistema\ayudantes as Sisayu;
 
 
 class dataControlador extends Sisnuc\APControlador
