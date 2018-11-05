@@ -65,7 +65,7 @@ define('Ap_AP_NOMBRE', 'Agilphp');
 define('Ap_AP_SLOGAN', 'Tu Framework php MVC hispano ');
 
 /* Empresa de la aplicacion */
-define('Ap_AP_EMPRESA', 'www.webcol.net');
+define('Ap_AP_EMPRESA', '@efrasoft');
 
 /* Creditos de la aplicacion */
 define('Ap_AP_CREDITOS', 'CopyLeft 2018 Debeloped by www.webcol.net');
