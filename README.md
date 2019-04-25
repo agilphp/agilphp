@@ -33,12 +33,12 @@ buscamos una fácil instalación un código claro, limpio en español, basado en
 ------------------
 
 ```
-mvc/                    Implementa el modelo vista controlador
-public_/                Archivos y direcrectorios publicos css, js, imagenes
-ejemplo_bd/             Ejemplo de la bsase de datos .sql
+mvc/                    Implementa el módelo vista controlador
+public_/                Archivos y directorios publicos css, js, imágenes
+ejemplo_bd/             Ejemplo de la base de datos .sql
 sistema/                Ayudantes, librerias, servicios, nucleo
-temporal/               Informaci�n temporal 
-log/                    Registro de error_log de la aplicacion
+temporal/               Información temporal 
+log/                    Registro de error_log de la aplicación
 ```
 
 
