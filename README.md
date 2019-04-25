@@ -1,4 +1,4 @@
-#Agilphp  Vs 1.0#
+#Agilphp  Vs 1.1#
 ===========================
 
 [![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -38,6 +38,7 @@ public_/                archivos y direcrectorios publicos css, js, imagenes
 ejemplo_bd/             Ejemplo de la bsase de datos .sql
 sistema/                ayudantes, librerias, servicios, nucleo
 temporal/               informaci�n temporal 
+log/                    Registro de error_log de la aplicacion
 ```
 
 
@@ -79,7 +80,7 @@ Tu puede colaborar con:
 ##COLABORADORES HOY##
 -----------------
 
-Calima Framework agradece a las siguientes personas por creer en este proyecto y sin buscar algun beneficio han destinado parte de su tiempo para ayudar en el mejoramiento del sistema, 
+AgilPhp agradece a las siguientes personas por creer en este proyecto y sin buscar algun beneficio han destinado parte de su tiempo para ayudar en el mejoramiento del sistema, 
 Les deseamos de parte de Webcol muchas bendiciones y esperamos que cada dia esta comunidad sea mas grande y dejemos en alto nuestro sello como HispanoHablantes que somos.
 
 Top 10 de participantes no dejes de estar aquí:
