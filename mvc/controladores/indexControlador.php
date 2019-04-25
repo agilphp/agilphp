@@ -69,7 +69,7 @@ class indexControlador extends Sisnuc\APControlador
         if(Ap_CONFIG_INICIO==true){
             
             $this->_vista->titulo = 'AgilPhp';
-            $this->_vista->imprimirVista('index', 'instalador');
+            $this->_vista->imprimirVista('index', 'index');
             
             
         }elseif (Ap_CONFIG_INICIO=='false') {
