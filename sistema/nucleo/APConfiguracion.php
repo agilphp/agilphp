@@ -91,7 +91,7 @@ define('publicador','2233');
 
 /* Configuracion de tu base de datos */
 define('AP_BD_HOST', 'localhost');
-define('AP_BD_NOMBRE', 'calima');
+define('AP_BD_NOMBRE', 'agilphp');
 define('AP_BD_USUARIO', 'root');
 define('AP_BD_CLAVE', '');
 define('AP_BD_CHAR', 'utf8');

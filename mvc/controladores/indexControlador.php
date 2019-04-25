@@ -34,6 +34,8 @@ if (version_compare(PHP_VERSION, '5.3.20', '<'))
 //Utilizamos un alias
 use sistema\nucleo as Sisnuc;
 use sistema\ayudantes as Sisayu;
+//use PHPTool
+
 
 
 class indexControlador extends Sisnuc\APControlador
@@ -42,6 +44,7 @@ class indexControlador extends Sisnuc\APControlador
     private $_ayuda;
     private $_seg;
     private $_sesion;
+    private $_logger;
     
     public function __construct() {
         parent::__construct();
@@ -50,6 +53,8 @@ class indexControlador extends Sisnuc\APControlador
         //$this->cargaAyudante('APPHPAyuda');
 		//$this->cargaAyudante('APPHPSeguridad');
         $this->_seg= new Sisayu\APPHPSeguridad;
+        //https://packagist.org/packages/elmijo/php-error-log
+        $this->_logger = new PHPTools\PHPErrorLog\PHPErrorLog();
         
         $this->_sesion=new Sisnuc\APSesion();
          
@@ -60,6 +65,7 @@ class indexControlador extends Sisnuc\APControlador
         // Se verifica que en el archivo de configuracion.php la constante AP_CONFIG_INICIO==true
         //Si esta en True se lanza el instalador de AP
         $this->_sesion->iniciarSesion('_s', false);
+        $this->_logger->write('Se inicia la Aplicacion Index...',PEL_ERROR,realpath('log/dev.log'));
         if(Ap_CONFIG_INICIO==true){
             
             $this->_vista->titulo = 'AgilPhp';
