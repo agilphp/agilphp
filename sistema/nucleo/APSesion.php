@@ -42,7 +42,8 @@ class APSesion
     private $bdconector = AP_BD_CONECTOR;
     
    public function __construct() {
-       session_regenerate_id(true);
+      //ACTIVAR PARA PHP 5
+      // session_regenerate_id(true);
          // set our custom session functions.
       session_set_save_handler(array($this, 'abrir'), array($this, 'cerrar'), array($this, 'leer'), array($this, 'escribir'), array($this, 'destruir'), array($this, 'gc'));
       // This line prevents unexpected effects when using objects as save handlers.
@@ -78,6 +79,8 @@ class APSesion
       session_name($session_name);
       // Now we cat start the session
       session_start();
+      //DESACTIVAR PARA PHP5
+      ob_start();
      
       // This line regenerates the session and delete the old one. 
       // It also generates a new encryption key in the database. 
