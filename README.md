@@ -1,19 +1,21 @@
-#Agilphp  Vs 1.1#
+#Agilphp  Vs 2.0#
 ===========================
 
 [![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <img src="http://www.AgilPhp.com/public_/images/ascii_Cf.PNG"/>
 
+AgilPhp Framework thanks the community that in some way wishes to support this project.
+If you want to help, remember that your help must be for this version of AgilPhp in Spanish or English.
 
 AgilPhp Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
-Si tienes deseos de ayudar recuerda que tu ayuda debe ser para esta version de Ap en español.
+Si tienes deseos de ayudar recuerda que tu ayuda debe ser para esta version de AgilPhp en español o ingles.
 
+AgilPhp Embedded [bootstrap 4.0] (http://getbootstrap.com/). It is built based on methodologies from different PHP Frameworks and uses some edited opensource examples,
+We are looking for an easy installation and clear, clean code, based on the MVC model under the object-oriented paradigm.
 
-Ap  Trae embebido [bootstrap 4.0] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
-buscamos una fácil instalación un código claro, limpio en español, basado en el modelo MVC bajo el paradigma orientado a objetos.
-
- 
+AgilPhp Trae embebido [bootstrap 4.0] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
+buscamos una fácil instalación un código claro, limpio, basado en el modelo MVC bajo el paradigma orientado a objetos.
 
 
 
@@ -35,8 +37,8 @@ buscamos una fácil instalación un código claro, limpio en español, basado en
 ```
 mvc/                    Implementa el módelo vista controlador
 public_/                Archivos y directorios publicos css, js, imágenes
-ejemplo_bd/             Ejemplo de la base de datos .sql
-sistema/                Ayudantes, librerias, servicios, nucleo
+example_bd/             Ejemplo de la base de datos .sql
+sistem/                 Ayudantes, librerias, servicios, nucleo
 temporal/               Información temporal 
 log/                    Registro de error_log de la aplicación
 ```
@@ -45,30 +47,37 @@ log/                    Registro de error_log de la aplicación
 ##DOCUMENTACION##
 -----------------
 
-Ap PHP [Clases de Referencia](http://www.AgilPhp.com/clases/) y 
- [Guía de ayuda](http://www.AgilPhp.com/blog/) sigue cada página de ayuda y termina sus ejemplos.
+Ap PHP [Clases de Referencia](http://www.AgilPhp.com/clases/) 
 
 
 
 ##REQUERIMIENTOS MINIMOS##
 -------------------------
 
-PHP 5.4.+
+PHP 8.2.+
 Apache 2.2.+
-Mysql 5.2.+
+Mysql 8.0.+
 
 Multiplataforma
 
 
 ##COLABORA##
 -----------------
+If you think you can help in some way, don't hesitate and contact the AgilPhp community.
+AgilPhp believes that your support is too important without thinking in the slightest, with your help we make this tool an excellent development option for the community every day.
 
-Si crees que puedes ayudar de alguna manera no lo dudes y ponte en contacto con la comunidad Cf
-Cf cree que tu apoyo es demasiado importante sin pensar en lo mínimo que sea,  con tu ayuda hacemos de esta herramienta cada día una excelente opción de desarrollo para la comunidad  de habla hispana.
+Si crees que puedes ayudar de alguna manera no lo dudes y ponte en contacto con la comunidad AgilPhp
+AgilPhp cree que tu apoyo es demasiado importante sin pensar en lo mínimo que sea,  con tu ayuda hacemos de esta herramienta cada día una excelente opción de desarrollo para la comunidad.
 
-Tu puede colaborar con:
+You can collaborate with:
+* [Report issues](https://github.com/agilphp/agilphp/issues)
+* Collaborate with
+    - Design ideas or templates for the framework.
+    - Development of helpers, libraries or web services.
+    - Documentation books, document code, wiki, blog, forum
+    - Send detected errors or new proposals with which you think you could help
 
-
+Tu puedes colaborar con:
 * [Report issues](https://github.com/agilphp/agilphp/issues)
 * Colabora con
     - Ideas de diseño o templates para el marco de trabajo.
@@ -79,6 +88,9 @@ Tu puede colaborar con:
 
 ##COLABORADORES HOY##
 -----------------
+
+AgilPhp thanks the following people for believing in this project and without seeking any benefit, they have dedicated part of their time to help improve the system,
+We wish you many blessings on behalf of Webcol and we hope that every day this community grows larger and that we raise our seal as the Spanish Speakers that we are.
 
 AgilPhp agradece a las siguientes personas por creer en este proyecto y sin buscar algun beneficio han destinado parte de su tiempo para ayudar en el mejoramiento del sistema, 
 Les deseamos de parte de Webcol muchas bendiciones y esperamos que cada dia esta comunidad sea mas grande y dejemos en alto nuestro sello como HispanoHablantes que somos.
