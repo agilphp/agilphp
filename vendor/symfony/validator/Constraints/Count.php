@@ -22,8 +22,8 @@ use Symfony\Component\Validator\Exception\MissingOptionsException;
  */
 class Count extends Constraint
 {
-    const TOO_FEW_ERROR = 'bef8e338-6ae5-4caf-b8e2-50e7b0579e69';
-    const TOO_MANY_ERROR = '756b1212-697c-468d-a9ad-50dd783bb169';
+    public const TOO_FEW_ERROR = 'bef8e338-6ae5-4caf-b8e2-50e7b0579e69';
+    public const TOO_MANY_ERROR = '756b1212-697c-468d-a9ad-50dd783bb169';
 
     protected static $errorNames = [
         self::TOO_FEW_ERROR => 'TOO_FEW_ERROR',
@@ -51,7 +51,7 @@ class Count extends Constraint
         parent::__construct($options);
 
         if (null === $this->min && null === $this->max) {
-            throw new MissingOptionsException(sprintf('Either option "min" or "max" must be given for constraint %s', __CLASS__), ['min', 'max']);
+            throw new MissingOptionsException(sprintf('Either option "min" or "max" must be given for constraint "%s".', __CLASS__), ['min', 'max']);
         }
     }
 }
