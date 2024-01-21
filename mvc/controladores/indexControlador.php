@@ -25,9 +25,9 @@
 
 
 //verificamos la version de php en tu servidor web o local
-if (version_compare(PHP_VERSION, '5.3.20', '<'))
+if (version_compare(PHP_VERSION, '8.0', '<'))
 {
-	die('Su Hosting tiene una version < a PHP 5.3.20 debes actualizar para esta version de Calima. su version actual de PHP es: '.PHP_VERSION);
+	die('Su Hosting tiene una version < a PHP 8.1 debes actualizar para esta version de Calima. su version actual de PHP es: '.PHP_VERSION);
 }
 
 //Cargamos los Espacios de nombres para el nucleo y los ayudantes
@@ -49,13 +49,9 @@ class indexControlador extends Sisnuc\APControlador
     public function __construct() {
         parent::__construct();
        
-        $this->_ayuda= new Sisayu\APPHPAyuda;
-        //$this->cargaAyudante('APPHPAyuda');
-		//$this->cargaAyudante('APPHPSeguridad');
-        $this->_seg= new Sisayu\APPHPSeguridad;
-        //https://packagist.org/packages/elmijo/php-error-log
-        $this->_logger = new PHPTools\PHPErrorLog\PHPErrorLog();
-        
+        $this->_ayuda= new Sisayu\APPHPAyuda;        
+        $this->_seg= new Sisayu\APPHPSeguridad;        
+        $this->_logger = new PHPTools\PHPErrorLog\PHPErrorLog();        
         $this->_sesion=new Sisnuc\APSesion();
          
     }
@@ -64,19 +60,10 @@ class indexControlador extends Sisnuc\APControlador
     { 
         // Se verifica que en el archivo de configuracion.php la constante AP_CONFIG_INICIO==true
         //Si esta en True se lanza el instalador de AP
-        $this->_sesion->iniciarSesion('_s', false);
-        $this->_logger->write('Se inicia la Aplicacion Index...',PEL_ERROR,realpath('log/dev.log'));
-        if(Ap_CONFIG_INICIO==true){
-            
-            $this->_vista->titulo = 'AgilPhp';
-            $this->_vista->imprimirVista('index', 'index');
-            
-            
-        }elseif (Ap_CONFIG_INICIO=='false') {
-            
-            $this->_vista->titulo = 'AgilPhp';
-            $this->_vista->imprimirVista('index', 'instalador');
-            //$this->_sesion->iniciarSesion('_s', false);
+        //$this->_sesion->iniciarSesion('_s', false);
+        $this->_logger->write('Se inicia la Aplicacion Index...',PEL_INFO,realpath('log/dev.log'));
+        if(Ap_CONFIG_INICIO==true){            
+            echo "<h1>Hi AgilPhp</h1>";            
         }
     } 
 }
