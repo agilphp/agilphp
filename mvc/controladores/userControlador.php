@@ -1,7 +1,7 @@
 <?php
 
 
-class usuarioControlador extends \sistema\nucleo\APControlador
+class userControlador extends \sistema\nucleo\APControlador
 {
     private $_ayuda;
     private $_seg;
