@@ -6,5 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'WideImage' => array($vendorDir . '/smottt/wideimage/lib'),
+    'Twig_' => array($vendorDir . '/twig/twig/lib'),
     'Propel' => array($vendorDir . '/propel/propel/src'),
+    'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
 );
