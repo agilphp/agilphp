@@ -1,132 +1,179 @@
-#Agilphp  Vs 2.0#
-===========================
+# Proyecto Hexagonal en PHP 8.2
 
-[![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Este proyecto implementa una arquitectura hexagonal utilizando PHP 8.2 y Composer.
 
-<img src="http://www.AgilPhp.com/public_/images/ascii_Cf.PNG"/>
+## Requisitos
 
-AgilPhp Framework thanks the community that in some way wishes to support this project.
-If you want to help, remember that your help must be for this version of AgilPhp in Spanish or English.
+- PHP 8.2 o superior.
+- Composer.
 
-AgilPhp Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
-Si tienes deseos de ayudar recuerda que tu ayuda debe ser para esta version de AgilPhp en español o ingles.
+## Instalación
 
-AgilPhp Embedded [bootstrap 4.0] (http://getbootstrap.com/). It is built based on methodologies from different PHP Frameworks and uses some edited opensource examples,
-We are looking for an easy installation and clear, clean code, based on the MVC model under the object-oriented paradigm.
+1. Clona este repositorio.
+2. Ejecuta `composer install` para instalar las dependencias.
 
-AgilPhp Trae embebido [bootstrap 4.0] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
-buscamos una fácil instalación un código claro, limpio, basado en el modelo MVC bajo el paradigma orientado a objetos.
+## Ejecución de Pruebas
 
+Ejecuta las pruebas con el siguiente comando:
 
-
-
-[![Latest Stable Version](https://poser.pugx.org/webcol/calima/v/stable)](https://packagist.org/packages/webcol/calima)  [![Latest Unstable Version](https://poser.pugx.org/webcol/calima/v/unstable)](https://packagist.org/packages/webcol/calima) [![License](https://poser.pugx.org/webcol/calima/license)](https://packagist.org/packages/webcol/calima)
-
-
-
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webcol/Calima/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webcol/Calima/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/webcol/Calima/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/webcol/Calima/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/webcol/Calima/badges/build.png?b=master)](https://scrutinizer-ci.com/g/webcol/Calima/build-status/master)
-
-[![Code Climate](https://codeclimate.com/github/webcol/Calima/badges/gpa.svg)](https://codeclimate.com/github/webcol/Calima)
-[![Test Coverage](https://codeclimate.com/github/webcol/Calima/badges/coverage.svg)](https://codeclimate.com/github/webcol/Calima)
-
-##ESTRUCTURA DE DIRECTORIOS##
-------------------
-
-```
-mvc/                    Implementa el módelo vista controlador
-public_/                Archivos y directorios publicos css, js, imágenes
-example_bd/             Ejemplo de la base de datos .sql
-sistem/                 Ayudantes, librerias, servicios, nucleo
-temporal/               Información temporal 
-log/                    Registro de error_log de la aplicación
+```bash
+vendor\bin\phpunit
 ```
 
+# AgilPHP 3.0
 
-##DOCUMENTACION##
------------------
+AgilPHP 3.0 es un microservicio desarrollado en PHP 8.2 con arquitectura hexagonal. Este proyecto utiliza MariaDB como base de datos y está preparado para ejecutarse en un entorno Docker.
 
-Ap PHP [Clases de Referencia](http://www.AgilPhp.com/clases/) 
+## Requisitos
 
+- Docker
+- Docker Compose
 
+## Instalación y Ejecución
 
-##REQUERIMIENTOS MINIMOS##
--------------------------
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/agilphp3.0.git
+   cd agilphp3.0
+   ```
 
-PHP 8.2.+
-Apache 2.2.+
-Mysql 8.0.+
+2. Construye y ejecuta los contenedores:
+   ```bash
+   docker-compose build
+   docker-compose up
+   ```
 
-Multiplataforma
+3. Accede a la aplicación en tu navegador:
+   ```
+   http://localhost:8080
+   ```
 
+## Endpoints
 
-##COLABORA##
------------------
-If you think you can help in some way, don't hesitate and contact the AgilPhp community.
-AgilPhp believes that your support is too important without thinking in the slightest, with your help we make this tool an excellent development option for the community every day.
+### Registro de Usuario
+- **URL**: `/register`
+- **Método**: `POST`
+- **Headers**:
+  - `Content-Type: application/json`
+- **Body**:
+  ```json
+  {
+    "username": "testuser",
+    "password": "password123"
+  }
+  ```
 
-Si crees que puedes ayudar de alguna manera no lo dudes y ponte en contacto con la comunidad AgilPhp
-AgilPhp cree que tu apoyo es demasiado importante sin pensar en lo mínimo que sea,  con tu ayuda hacemos de esta herramienta cada día una excelente opción de desarrollo para la comunidad.
+### Inicio de Sesión
+- **URL**: `/login`
+- **Método**: `POST`
+- **Headers**:
+  - `Content-Type: application/json`
+- **Body**:
+  ```json
+  {
+    "username": "testuser",
+    "password": "password123"
+  }
+  ```
 
-You can collaborate with:
-* [Report issues](https://github.com/agilphp/agilphp/issues)
-* Collaborate with
-    - Design ideas or templates for the framework.
-    - Development of helpers, libraries or web services.
-    - Documentation books, document code, wiki, blog, forum
-    - Send detected errors or new proposals with which you think you could help
+### Obtener Datos del Usuario
+- **URL**: `/user`
+- **Método**: `GET`
+- **Headers**:
+  - `Authorization: Bearer <TOKEN>`
 
-Tu puedes colaborar con:
-* [Report issues](https://github.com/agilphp/agilphp/issues)
-* Colabora con
-    - Ideas de diseño o templates para el marco de trabajo.
-    - Desarrollo de ayudantes, librerías o servicios web.
-    - Documentación libros, documentar código, wiki, blog, foro
-    - Envía errores detectados o nuevas propuestas con las que crees podrías ayudar
+## Base de Datos
 
+La base de datos MariaDB se configura automáticamente con las siguientes credenciales:
+- **Usuario**: `user`
+- **Contraseña**: `password`
+- **Base de datos**: `agilphphex`
 
-##COLABORADORES HOY##
------------------
+## Estructura del Proyecto
 
-AgilPhp thanks the following people for believing in this project and without seeking any benefit, they have dedicated part of their time to help improve the system,
-We wish you many blessings on behalf of Webcol and we hope that every day this community grows larger and that we raise our seal as the Spanish Speakers that we are.
+- `src/`: Código fuente principal.
+  - `Application/`: Casos de uso y controladores.
+  - `Domain/`: Entidades, interfaces y lógica de negocio.
+  - `Infrastructure/`: Adaptadores de infraestructura y acceso a datos.
+- `public/`: Punto de entrada para las solicitudes HTTP.
+- `config/`: Archivos de configuración.
 
-AgilPhp agradece a las siguientes personas por creer en este proyecto y sin buscar algun beneficio han destinado parte de su tiempo para ayudar en el mejoramiento del sistema, 
-Les deseamos de parte de Webcol muchas bendiciones y esperamos que cada dia esta comunidad sea mas grande y dejemos en alto nuestro sello como HispanoHablantes que somos.
+# AgilPHP 3.0 Microframework
 
-Top 10 de participantes no dejes de estar aquí:
+AgilPHP 3.0 es un microframework ligero construido con PHP 8.2. Proporciona una estructura simple para construir aplicaciones modulares y extensibles.
 
+## Características
+- Contenedor de Inyección de Dependencias
+- Sistema de Ruteo Flexible
+- Arquitectura Modular
 
-* [Efrain Restrepo](https://www.linkedin.com/in/efrasoft)
-	- Desarrollador Fundador
+## Empezando
 
-	
-	
-##DONACIONES##
------------------
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="8PCLCKFPLYJUQ">
-<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
+### Instalación
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/agilphp3.0.git
+   cd agilphp3.0
+   ```
 
+2. Instala las dependencias usando Composer:
+   ```bash
+   composer install
+   ```
 
-##CONTACTOS##
------------------
+3. Inicia el servidor de desarrollo:
+   ```bash
+   php -S localhost:8080 -t public
+   ```
 
-http://AgilPhp.com/ <br>
-soporte@AgilPhp.com/ <br>
-info@AgilPhp.com/ <br>
-https://twitter.com/AgilPhp <br>
-https://www.facebook.com/AgilPhp <br>
-http://www.meetup.com/AgilPhp/members/ <br>
+4. Accede a la aplicación en tu navegador:
+   ```
+   http://localhost:8080
+   ```
 
+## Uso
 
-<img src="http://www.AgilPhp.com/public_/images/Cf.PNG"/>
+### Ruteo
+Define rutas en el archivo `public/index.php` usando la clase `Router`:
 
-##Licencia##
------------------
+```php
+$router->add('GET', '/ejemplo', function () {
+    echo json_encode(['mensaje' => '¡Hola, Mundo!']);
+});
+```
 
-AgilPhp framework Ap es software openSourced bajo [Licencia Mit] (http://es.wikipedia.org/wiki/Licencia_MIT)
+### Inyección de Dependencias
+Registra y resuelve servicios usando la clase `Container`:
+
+#### Registrar un Servicio
+```php
+$container->set('NombreDelServicio', function () {
+    return new ClaseDelServicio();
+});
+```
+
+#### Resolver un Servicio
+```php
+$servicio = $container->get('NombreDelServicio');
+```
+
+### Ejemplo
+Aquí hay un ejemplo de cómo registrar un controlador y usarlo en una ruta:
+
+```php
+$container->set('ControladorEjemplo', function () {
+    return new App\Controllers\ControladorEjemplo();
+});
+
+$router->add('GET', '/ejemplo', function () use ($container) {
+    $controlador = $container->get('ControladorEjemplo');
+    $controlador->manejar();
+});
+```
+
+## Contribuciones
+¡Las contribuciones son bienvenidas! Por favor, abre un issue o envía un pull request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la [MIT License](LICENSE).

@@ -1,78 +1,16 @@
 {
-	"name": "webcol/calima",
-	"description": "Framework PHP en español",
-	"type": "project",
-        "version": "1.1.5",
-	"keywords": ["framework", "Php", "MVC", "oop", "Framework php hispano"],
-	"homepage": "http://AgilPhp.com",
-	"license": "MIT",
-	"authors": [
-            
-                {
-                        "name": "Efrain Restrepo",
-                        "email": "efrasoft@outlook.com",
-                        "homepage": "http://AgilPhp.com/autores",
-                        "role": "Cofundador - Desarrollador"
-                },
-                 
-                {
-                        "name": "Ramon Serrano",
-                        "email": "ramon.calle.88@gmail.com",
-                        "homepage": "http://AgilPhp.com/autores",
-                        "role": "Desarrollador - nucleo"
-                },
-		{
-			"name": "AgilPhp Comunidad",
-			"homepage": "https://github.com/webcol/calima/graphs/contributors"
-		}
-	],
-	"support": {
-		"email": "info@AgilPhp.com",
-		"issues": "https://github.com/webcol/Calima/issues",
-		"blog": "http://AgilPhp.com/blog",
-		"source": "https://github.com/webcol/Calima"
-	},
-	
-	"bin": [
-		"sistema/nucleo/APBootstrap.php"
-	],
-	"require": {
-		"php": ">=5.4.0",
-		"propel/propel": "2.0.0-alpha8",
-		"symfony/mailer": "*",				
-		"setasign/fpdf": "1.*",
-		"phpoffice/phpspreadsheet": "1.*",               
-		"league/csv": "7.*",
-		"siriusphp/upload": "2.*",                                
-		"monolog/monolog":  "2.8",
-		"elmijo/php-error-log": "2.*",
-		"smottt/wideimage": "*",
-		"google/recaptcha": "^1.2",
-		"miladrahimi/phpcrypt": "5.*",
-		"twig/twig": "2.*",
-		"paragraph1/php-fcm": "*",
-		"ultramsg/whatsapp-php-sdk": "*",
-		"dompdf/dompdf": "*",
-		 "endroid/qr-code": "*",				 
-		 "firebase/php-jwt": "*",
-		 "paragonie/sodium_compat": "*"   
-                
-	},
-         
-        
-	"autoload": {
-		"classmap" : [
-			"sistema/ayudantes/"
-			
-		],
-                 "psr-4": {
-                    
-                    "sistema\\nucleo\\": "sistema/nucleo",
-                    "sistema\\ayudantes\\": "sistema/ayudantes"
-                    
-                    
-
-                }
-	}
-        
+    "name": "agilphphex/project",
+    "description": "Proyecto con arquitectura hexagonal en PHP 8.2",
+    "type": "project",
+    "require": {
+        "firebase/php-jwt": "^6.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    }
 }
