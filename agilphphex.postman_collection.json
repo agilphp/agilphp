@@ -1,0 +1,70 @@
+{
+    "info": {
+        "name": "AgilPHPHex API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Register User",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost/agilphphex/public/register",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["agilphphex", "public", "register"]
+                }
+            }
+        },
+        {
+            "name": "Login User",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"password123\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost/agilphphex/public/login",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["agilphphex", "public", "login"]
+                }
+            }
+        },
+        {
+            "name": "Get User",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Authorization",
+                        "value": "Bearer <TOKEN>"
+                    }
+                ],
+                "url": {
+                    "raw": "http://localhost/agilphphex/public/user",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "path": ["agilphphex", "public", "user"]
+                }
+            }
+        }
+    ]
+}
